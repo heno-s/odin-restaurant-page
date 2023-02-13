@@ -163,6 +163,12 @@ header {
     margin-bottom: 3px;
 }
 
+.location :first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
 footer {
     background-color: #000a;
     text-align: center;
