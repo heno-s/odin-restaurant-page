@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background: url(./images/restaurant.jpeg);
+    background: url(./images/restaurant.jpeg) no-repeat center / cover;
 }
 
 .container {
