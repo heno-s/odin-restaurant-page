@@ -106,6 +106,63 @@ header {
     font-weight: bold;
 }
 
+.contact-info {
+    display: grid;
+    width: max(70%, 300px);
+    margin: 0 auto 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-template: 50% 50% / 4fr 5fr;
+    grid-template-areas:
+        "open-hours address"
+        "open-hours contact";
+}
+
+.contact-info > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #323a3d;
+    padding: 10px 20px;
+}
+
+.contact-info > * > :first-child {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.open-hours {
+    grid-area: open-hours;
+    border-right: 2px solid #000;
+}
+
+.open-hour {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.open-hour:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.address {
+    grid-area: address;
+    border-bottom: 2px solid #000;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.email {
+    margin-bottom: 3px;
+}
+
 footer {
     background-color: #000a;
     text-align: center;
