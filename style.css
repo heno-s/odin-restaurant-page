@@ -51,6 +51,7 @@ header {
     background-color: #000d;
     flex-grow: 1;
     padding: 30px 50px;
+    overflow-y: auto;
 }
 
 .restaurant-title {
@@ -59,6 +60,36 @@ header {
 }
 .restaurant-description {
     margin-bottom: 25px;
+}
+
+.menu-item {
+    display: flex;
+    gap: 30px;
+    width: 70%;
+    margin: 0 auto 30px;
+    align-items: center;
+}
+
+.item-name {
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.item-ingredients {
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.2;
+}
+
+.menu-item img {
+    height: 100px;
+    aspect-ratio: 1;
+}
+
+.item-price {
+    font-weight: bold;
 }
 
 footer {
