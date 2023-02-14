@@ -121,6 +121,31 @@ function createContact() {
     return contact;
 }
 
+function createLocation() {
+    const location = document.createElement("div");
+    location.classList.add("location");
+    const title = document.createElement("div");
+    title.textContent = "Location:";
+
+    const map = document.createElement("div");
+    map.classList.add("map");
+    map.innerHTML = `<iframe
+    data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC8V96sGgzrasorg2xPOlrlp-cpQFPLSxM&amp;q=U%20Franka%2C%20Pek%C3%A1rska%2014%2C%20Sere%C4%8F%2092601&amp;zoom=17"
+    allowfullscreen=""
+    height="415"
+    width="100%"
+    class="js-google-maps-embed-frame js-consent-gated-iframe"
+    frameborder="0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC8V96sGgzrasorg2xPOlrlp-cpQFPLSxM&amp;q=U%20Franka%2C%20Pek%C3%A1rska%2014%2C%20Sere%C4%8F%2092601&amp;zoom=17"
+    style="border: none"
+    ></iframe>`;
+
+    location.appendChild(title);
+    location.appendChild(map);
+
+    return location;
+}
+
 function render() {
     const content = document.querySelector("#content");
 
@@ -130,12 +155,14 @@ function render() {
     const openHours = createOpenHours();
     const address = createAddress();
     const contact = createContact();
+    const location = createLocation();
 
     contactInfo.appendChild(openHours);
     contactInfo.appendChild(address);
     contactInfo.appendChild(contact);
 
     content.appendChild(contactInfo);
+    content.appendChild(location);
 }
 
 export default {
