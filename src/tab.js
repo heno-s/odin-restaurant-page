@@ -1,3 +1,5 @@
+import { switchTab } from "./tabController";
+
 export function createTab(id, textContent, isActive) {
     const tab = document.createElement("span");
     tab.id = id;
@@ -6,6 +8,10 @@ export function createTab(id, textContent, isActive) {
     if (isActive) {
         tab.classList.add("active");
     }
+
+    tab.addEventListener("click", function () {
+        switchTab(this);
+    });
 
     return tab;
 }
