@@ -79,7 +79,7 @@ header {
 .menu-item {
     display: flex;
     gap: 30px;
-    width: 70%;
+    width: 90%;
     margin: 0 auto 30px;
     align-items: center;
 }
